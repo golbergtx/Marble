@@ -1,0 +1,174 @@
+.site-navigation
+  padding-bottom: 10px
+  background: #F8F8F8 url(../img/site-head-bg.png)
+  border-bottom: 5px solid rgba(0,0,0,.04)
+
+.site-head__logo-wrapper
+  display: flex
+  justify-content: space-between
+
+.site-head__logo
+  font: bold 40px 'Roboto Condensed', "Arial", sans-serif
+  line-height: 65px
+  text-transform: uppercase
+
+.navigation__btn-toggle
+  position: relative
+  width: 40px
+  height: 40px
+  margin: auto 0
+  background: none
+  border: none
+  outline: none
+  font-size: 0
+  cursor: pointer
+
+.navigation__btn-toggle--open
+  &::after
+    content: ""
+    position: absolute
+    top: 10px
+    left: 2px
+    width: 35px
+    height: 2px
+    background-color: #1ABB9C
+    box-shadow: 0 8px 0 0 #1ABB9C, 0 16px 0 0 #1ABB9C
+
+  &:active::after
+    background-color: rgba(26,187,156,.7)
+    box-shadow: 0 8px 0 0 rgba(26,187,156,.7), 0 16px 0 0 rgba(26,187,156,.7)
+
+.navigation__btn-toggle--closed
+  &::before,
+  &::after
+    content: ""
+    position: absolute
+    top: 18px
+    left: 3px
+    width: 35px
+    height: 2px
+    background-color: #1ABB9C
+    box-shadow: none
+
+  &::before
+    transform: rotate(45deg)
+  &::after
+    transform: rotate(-45deg)
+
+  &:active::before,
+  &:active::after
+    background-color: rgba(26,187,156,.7)
+
+.site-navigation__items
+  display: none
+  margin: 0
+  padding: 0
+  list-style: none
+
+.site-navigation__item
+  border-bottom: 1px solid rgba(0,0,0,.2)
+  &:hover
+    background-color:  rgba(224,255,255,.2)
+
+.site-navigation__link
+  display: block
+  padding: 5px 0
+  font: bold 18px 'Roboto Condensed', "Arial", sans-serif
+  line-height: 20px
+  text-transform: uppercase
+  text-decoration: none
+  text-align: center
+  color: #4E4E4E
+
+  &:hover
+    color: rgba(78,78,78,.8)
+
+  &:active
+    color: #1ABB9C
+
+.site-navigation__link--active
+  color: #1ABB9C
+  pointer-events: none
+
+.title-wrapper
+  height: 500px
+  padding: 1px
+  background: #545559 url("../img/site-head-bg.jpg") center
+  background-size: cover
+
+.main-title
+  margin: 50px 0 0 0
+  font: bold 36px 'Roboto Slab', 'Times New Roman', serif
+  line-height: 40px
+  text-align: center
+  color: #F3F3F3
+  text-shadow: 1px 1px 3px black
+
+.second-title
+  margin: 45px 0 0 0
+  font: bold 28px 'Roboto Slab', 'Times New Roman', serif
+  line-height: 32px
+  text-align: center
+  color: #A8A8A8
+  text-shadow: 1px 1px 3px black
+
+.site-head__btn-see-portfolio
+  display: block
+  width: 140px
+  height: 45px
+  margin: 40px auto 0
+  border: 0
+  outline: 0
+  border-radius: 3px
+  background-color: rgba(63,141,191,.9)
+  box-shadow: inset 0 -1px 3px 1px rgba(0,0,0,.35)
+
+  font: 300 14px 'Roboto', "Arial", sans-serif
+  text-transform: uppercase
+  line-height: 35px
+  text-align: center
+  color: #FFFFFF
+  cursor: pointer
+
+  &:hover
+    background-color: rgba(63,141,191,1)
+
+  &:active
+    transform: translate(1px,1px)
+    box-shadow: inset 0 3px 5px 1px rgba(0,0,0, .25)
+
+@media ($desktop-widths)
+
+  .site-navigation
+    padding: 26px 0
+
+  .navigation__btn-toggle
+    display: none
+
+  .site-navigation__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  .site-navigation__items
+    display: block
+    font-size: 0
+
+  .site-navigation__item
+    display: inline-block
+    margin-right: 20px
+    background: none
+    border: none
+
+    &:last-child
+      margin-right: 0
+
+  .title-wrapper
+    height: 600px
+
+  .main-title
+    margin-top: 200px
+    font-size: 40px
+
+  .second-title
+    font-size: 32px
